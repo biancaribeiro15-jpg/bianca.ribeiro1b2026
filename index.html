@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="pt-BR"><head>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yandere Chronicle - Blog Não Oficial</title>
@@ -7,6 +9,7 @@
             --bg-color: #121214;
             --card-bg: #1a1a1e;
             --primary-color: #ff1e42;
+            --primary-dark: #b30f2b;
             --text-main: #e1e1e6;
             --text-muted: #a8a8b3;
             --border-color: #29292e;
@@ -29,7 +32,7 @@
         header {
             background: linear-gradient(135deg, #1a0005 0%, var(--bg-color) 100%);
             border-bottom: 2px solid var(--primary-color);
-            padding: 2rem 1rem;
+            padding: 2.5rem 1rem;
             text-align: center;
             cursor: pointer;
         }
@@ -38,7 +41,7 @@
             font-size: 2.5rem;
             font-weight: bold;
             color: var(--primary-color);
-            text-shadow: 0 0 10px rgba(255, 30, 66, 0.5);
+            text-shadow: 0 0 12px rgba(255, 30, 66, 0.4);
             text-transform: uppercase;
             letter-spacing: 2px;
         }
@@ -46,7 +49,7 @@
         .subtitle {
             color: var(--text-muted);
             margin-top: 0.5rem;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
         }
 
         /* Layout Principal */
@@ -77,31 +80,46 @@
             border: 1px solid var(--border-color);
             border-radius: 8px;
             overflow: hidden;
-            transition: transform 0.2s, border-color 0.2s;
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
         }
 
         article:hover {
             transform: translateY(-3px);
             border-color: var(--primary-color);
+            box-shadow: 0 4px 20px rgba(255, 30, 66, 0.15);
         }
 
-        .article-img {
+        /* Banners em estilo vetorial CSS substituindo imagens */
+        .article-banner {
             width: 100%;
-            height: 250px;
-            background-size: cover;
-            background-position: center;
+            height: 140px;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, #150811 100%);
             position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .banner-icon {
+            font-size: 3.5rem;
+            opacity: 0.85;
+            user-select: none;
         }
 
         .img-label {
             position: absolute;
-            bottom: 10px;
-            left: 10px;
-            background-color: rgba(0, 0, 0, 0.7);
+            bottom: 12px;
+            left: 16px;
+            background-color: rgba(0, 0, 0, 0.75);
             color: #fff;
-            padding: 0.3rem 0.6rem;
+            padding: 0.3rem 0.7rem;
             border-radius: 4px;
             font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .article-content {
@@ -116,8 +134,8 @@
         }
 
         .article-title {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
             color: var(--text-main);
         }
 
@@ -131,7 +149,7 @@
             background-color: transparent;
             color: var(--primary-color);
             border: 1px solid var(--primary-color);
-            padding: 0.5rem 1rem;
+            padding: 0.5rem 1.2rem;
             border-radius: 4px;
             text-decoration: none;
             font-weight: bold;
@@ -144,7 +162,7 @@
             color: #fff;
         }
 
-        /* Área de Leitura do Artigo (Dinâmica) */
+        /* Área de Leitura do Artigo */
         #article-view {
             display: none;
             background-color: var(--card-bg);
@@ -161,7 +179,7 @@
 
         #article-view p {
             color: var(--text-muted);
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
             line-height: 1.8;
         }
 
@@ -174,10 +192,12 @@
             cursor: pointer;
             margin-bottom: 1.5rem;
             font-weight: bold;
+            transition: background-color 0.2s;
         }
 
         .back-btn:hover {
             background-color: var(--primary-color);
+            color: #fff;
         }
 
         /* Barra Lateral (Sidebar) */
@@ -215,6 +235,7 @@
             text-decoration: none;
             transition: color 0.2s;
             cursor: pointer;
+            display: inline-block;
         }
 
         .widget ul li a:hover {
@@ -231,7 +252,9 @@
             color: var(--text-muted);
             font-size: 0.9rem;
         }
-    </style></head><body>
+    </style>
+</head>
+<body>
 
     <!-- Cabeçalho do Blog -->
     <header onclick="voltarHome()">
@@ -249,7 +272,8 @@
                 
                 <!-- Post 1 -->
                 <article>
-                    <div class="article-img" style="background-image: url('http://googleusercontent.com/image_collection/image_retrieval/15820446112145723093_0');">
+                    <div class="article-banner">
+                        <span class="banner-icon">⚔️</span>
                         <span class="img-label">Ayano Aishi / Gameplay</span>
                     </div>
                     <div class="article-content">
@@ -262,7 +286,8 @@
 
                 <!-- Post 2 -->
                 <article>
-                    <div class="article-img" style="background-image: url('http://googleusercontent.com/image_collection/image_retrieval/15820446112145723093_1');">
+                    <div class="article-banner" style="background: linear-gradient(135deg, #6b0c29 0%, #150811 100%);">
+                        <span class="banner-icon">🎀</span>
                         <span class="img-label">Osana Najimi / Rival</span>
                     </div>
                     <div class="article-content">
@@ -284,7 +309,7 @@
 
         <!-- Barra Lateral -->
         <aside>
-            <!-- Tópicos Populares (Hiperlinks Funcionais) -->
+            <!-- Tópicos Populares -->
             <div class="widget">
                 <h3 class="widget-title">Tópicos Populares</h3>
                 <ul>
@@ -303,7 +328,7 @@
         <p>&copy; 2026 Yandere Chronicle. Conteúdo de fãs sem fins comerciais. Yandere Simulator pertence ao seu desenvolvedor original.</p>
     </footer>
 
-    <!-- Script para gerenciar a navegação dos links sem recarregar a página -->
+    <!-- Script para gerenciar a navegação dos links -->
     <script>
         const artigos = {
             progresso: {
@@ -349,7 +374,6 @@
                     <div style="font-size: 0.85rem; color: var(--primary-color); font-weight: bold; margin-bottom: 0.5rem;">${art.data}</div>
                     <h2>${art.titulo}</h2>
                     <p>${art.texto}</p>
-                    <p>${art.texto}</p>
                 `;
                 feed.style.display = 'none';
                 view.style.display = 'block';
@@ -365,4 +389,6 @@
             feed.style.display = 'flex';
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-    </script></body></html>
+    </script>
+</body>
+</html>
