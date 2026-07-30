@@ -292,21 +292,7 @@
             <!-- Feed de Notícias -->
             <div id="posts-feed" class="posts-feed">
                 
-                <!-- Post 1 (Novo - Ryoba Aishi) -->
-                <article>
-                    <div class="article-banner" style="background: linear-gradient(135deg, #4a0e17 0%, #0d0408 100%);">
-                        <span class="banner-icon">📼</span>
-                        <span class="img-label">Ryoba Aishi / Modo 1989</span>
-                    </div>
-                    <div class="article-content">
-                        <div class="article-date">30 de Julho, 2026</div>
-                        <h2 class="article-title">Modo 1989: O Legado Sombrio de Ryoba Aishi</h2>
-                        <p class="article-excerpt">Conheça a história da mãe de Ayano! Descubra como Ryoba eliminou suas 10 rivais nos anos 80, enfrentou o Tribunal e conquistou seu Senpai em uma Akademi vintage.</p>
-                        <a class="btn-read" onclick="lerArtigo('ryoba')">Ler Artigo Completo</a>
-                    </div>
-                </article>
-
-                <!-- Post 2 -->
+                <!-- Post 1 -->
                 <article>
                     <div class="article-banner">
                         <span class="banner-icon">⚔️</span>
@@ -320,7 +306,7 @@
                     </div>
                 </article>
 
-                <!-- Post 3 -->
+                <!-- Post 2 -->
                 <article>
                     <div class="article-banner" style="background: linear-gradient(135deg, #6b0c29 0%, #150811 100%);">
                         <span class="banner-icon">🎀</span>
@@ -331,6 +317,20 @@
                         <h2 class="article-title">Guia Definitivo: Como eliminar rivais sem levantar suspeitas</h2>
                         <p class="article-excerpt">Quer manter sua reputação intacta na Academia Akademi? Listamos as melhores estratégias furtivas, uso de venenos e métodos pacíficos para lidar com os obstáculos de Ayano Aishi.</p>
                         <a class="btn-read" onclick="lerArtigo('guia')">Ler Artigo Completo</a>
+                    </div>
+                </article>
+
+                <!-- Post 3 (Ryoba Aishi posicionada no final do feed) -->
+                <article>
+                    <div class="article-banner" style="background: linear-gradient(135deg, #4a0e17 0%, #0d0408 100%);">
+                        <span class="banner-icon">📼</span>
+                        <span class="img-label">Ryoba Aishi / Modo 1989</span>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-date">10 de Julho, 2026</div>
+                        <h2 class="article-title">Modo 1989: O Legado Sombrio de Ryoba Aishi</h2>
+                        <p class="article-excerpt">Conheça a história da mãe de Ayano! Descubra como Ryoba eliminou suas 10 rivais nos anos 80, enfrentou o Tribunal e conquistou seu Senpai em uma Akademi vintage.</p>
+                        <a class="btn-read" onclick="lerArtigo('ryoba')">Ler Artigo Completo</a>
                     </div>
                 </article>
 
@@ -349,11 +349,11 @@
             <div class="widget">
                 <h3 class="widget-title">Tópicos Populares</h3>
                 <ul>
-                    <li><a onclick="lerArtigo('ryoba')">📼 O Julgamento de Ryoba Aishi (1989)</a></li>
                     <li><a onclick="lerArtigo('segredos')">🔍 Segredos da Academia Akademi</a></li>
                     <li><a onclick="lerArtigo('rivais')">👥 Lista de Rivais e Curiosidades</a></li>
                     <li><a onclick="lerArtigo('eastereggs')">🩸 Easter Eggs e Modos Secretos</a></li>
                     <li><a onclick="lerArtigo('requisitos')">⚙️ Requisitos e Otimização do Jogo</a></li>
+                    <li><a onclick="lerArtigo('ryoba')">📼 O Julgamento de Ryoba Aishi (1989)</a></li>
                 </ul>
             </div>
         </aside>
@@ -368,28 +368,6 @@
     <!-- Script para gerenciar a navegação dos links -->
     <script>
         const artigos = {
-            ryoba: {
-                titulo: "Modo 1989: O Legado Sombrio de Ryoba Aishi",
-                data: "30 de Julho, 2026",
-                texto: `
-                    <p>O <strong>Modo 1980s</strong> nos coloca no papel de <strong>Ryoba Aishi</strong>, a mãe da protagonista Ayano. Diferente da história atual, Ryoba viveu sua juventude em uma versão retro da Academia Akademi, lidando com rivais da época e enfrentando um sistema judiciário que quase a desmascarou.</p>
-                    
-                    <h3>📌 Principais Diferenças do Modo 1989</h3>
-                    <ul>
-                        <li><strong>Tecnologia Retrô:</strong> Sem smartphones! Em vez do Info-chan, Ryoba usa cabines telefônicas e jornais para obter informações.</li>
-                        <li><strong>As 10 Rivais Clássicas:</strong> Uma campanha completa jogável do início ao fim com rivais como Kaguya Wakaizumi e Chigusa Busujima.</li>
-                        <li><strong>Clima dos Anos 80:</strong> Filtros de estética VHS, trilha sonora synthwave e uniformes clássicos da época.</li>
-                    </ul>
-
-                    <h3>⚖️ O Julgamento Final</h3>
-                    <p>Ao contrário de Ayano, o destino de Ryoba culmina em um <strong>julgamento em tribunal</strong>. O jornalista investigativo tenta provar sua culpa perante o júri. Para obter o final bom, Ryoba precisa:</p>
-                    <ul>
-                        <li>Manter uma reputação impecável na escola.</li>
-                        <li>Não deixar nenhuma evidência física ou impressões digitais.</li>
-                        <li>Eliminar a última rival (Sumire Saitozaki) de maneira totalmente furtiva.</li>
-                    </ul>
-                `
-            },
             progresso: {
                 titulo: "Progresso da Rival Principal: O que esperar das próximas builds",
                 data: "29 de Julho, 2026",
@@ -415,6 +393,28 @@
                         <li><strong>1. Furtividade e Luvas:</strong> Sempre use luvas de borracha ao manusear armas para não registrar impressões digitais.</li>
                         <li><strong>2. Limpeza de Evidências:</strong> Descarte uniformes sujos de sangue no incinerador do clube de jardinagem e limpe o chão com esfregão e alvejante.</li>
                         <li><strong>3. Métodos Pacíficos:</strong> Se preferir não derramar sangue, use o sistema de <strong>Cupido (Matchmaking)</strong> para juntar a rival com outro estudante ou estrague a reputação dela até que desista de frequentar a escola.</li>
+                    </ul>
+                `
+            },
+            ryoba: {
+                titulo: "Modo 1989: O Legado Sombrio de Ryoba Aishi",
+                data: "10 de Julho, 2026",
+                texto: `
+                    <p>O <strong>Modo 1980s</strong> nos coloca no papel de <strong>Ryoba Aishi</strong>, a mãe da protagonista Ayano. Diferente da história atual, Ryoba viveu sua juventude em uma versão retro da Academia Akademi, lidando com rivais da época e enfrentando um sistema judiciário que quase a desmascarou.</p>
+                    
+                    <h3>📌 Principais Diferenças do Modo 1989</h3>
+                    <ul>
+                        <li><strong>Tecnologia Retrô:</strong> Sem smartphones! Em vez do Info-chan, Ryoba usa cabines telefônicas e jornais para obter informações.</li>
+                        <li><strong>As 10 Rivais Clássicas:</strong> Uma campanha completa jogável do início ao fim com rivais como Kaguya Wakaizumi e Chigusa Busujima.</li>
+                        <li><strong>Clima dos Anos 80:</strong> Filtros de estética VHS, trilha sonora synthwave e uniformes clássicos da época.</li>
+                    </ul>
+
+                    <h3>⚖️ O Julgamento Final</h3>
+                    <p>Ao contrário de Ayano, o destino de Ryoba culmina em um <strong>julgamento em tribunal</strong>. O jornalista investigativo tenta provar sua culpa perante o júri. Para obter o final bom, Ryoba precisa:</p>
+                    <ul>
+                        <li>Manter uma reputação impecável na escola.</li>
+                        <li>Não deixar nenhuma evidência física ou impressões digitais.</li>
+                        <li>Eliminar a última rival (Sumire Saitozaki) de maneira totalmente furtiva.</li>
                     </ul>
                 `
             },
