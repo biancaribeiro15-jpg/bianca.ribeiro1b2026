@@ -89,7 +89,7 @@
             box-shadow: 0 4px 20px rgba(255, 30, 66, 0.15);
         }
 
-        /* Banners em estilo vetorial CSS substituindo imagens */
+        /* Banners em estilo vetorial CSS */
         .article-banner {
             width: 100%;
             height: 140px;
@@ -173,14 +173,36 @@
 
         #article-view h2 {
             color: var(--primary-color);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             font-size: 2rem;
+        }
+
+        #article-view h3 {
+            color: #fff;
+            margin: 1.5rem 0 0.8rem 0;
+            font-size: 1.3rem;
+            border-left: 3px solid var(--primary-color);
+            padding-left: 0.8rem;
         }
 
         #article-view p {
             color: var(--text-muted);
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
             line-height: 1.8;
+        }
+
+        #article-view ul {
+            color: var(--text-muted);
+            margin: 0.5rem 0 1.5rem 1.5rem;
+            line-height: 1.8;
+        }
+
+        #article-view ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        #article-view strong {
+            color: var(--text-main);
         }
 
         .back-btn {
@@ -270,7 +292,21 @@
             <!-- Feed de Notícias -->
             <div id="posts-feed" class="posts-feed">
                 
-                <!-- Post 1 -->
+                <!-- Post 1 (Novo - Ryoba Aishi) -->
+                <article>
+                    <div class="article-banner" style="background: linear-gradient(135deg, #4a0e17 0%, #0d0408 100%);">
+                        <span class="banner-icon">📼</span>
+                        <span class="img-label">Ryoba Aishi / Modo 1989</span>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-date">30 de Julho, 2026</div>
+                        <h2 class="article-title">Modo 1989: O Legado Sombrio de Ryoba Aishi</h2>
+                        <p class="article-excerpt">Conheça a história da mãe de Ayano! Descubra como Ryoba eliminou suas 10 rivais nos anos 80, enfrentou o Tribunal e conquistou seu Senpai em uma Akademi vintage.</p>
+                        <a class="btn-read" onclick="lerArtigo('ryoba')">Ler Artigo Completo</a>
+                    </div>
+                </article>
+
+                <!-- Post 2 -->
                 <article>
                     <div class="article-banner">
                         <span class="banner-icon">⚔️</span>
@@ -284,11 +320,11 @@
                     </div>
                 </article>
 
-                <!-- Post 2 -->
+                <!-- Post 3 -->
                 <article>
                     <div class="article-banner" style="background: linear-gradient(135deg, #6b0c29 0%, #150811 100%);">
                         <span class="banner-icon">🎀</span>
-                        <span class="img-label">Osana Najimi / Rival</span>
+                        <span class="img-label">Osana Najimi / Guia</span>
                     </div>
                     <div class="article-content">
                         <div class="article-date">15 de Julho, 2026</div>
@@ -313,6 +349,7 @@
             <div class="widget">
                 <h3 class="widget-title">Tópicos Populares</h3>
                 <ul>
+                    <li><a onclick="lerArtigo('ryoba')">📼 O Julgamento de Ryoba Aishi (1989)</a></li>
                     <li><a onclick="lerArtigo('segredos')">🔍 Segredos da Academia Akademi</a></li>
                     <li><a onclick="lerArtigo('rivais')">👥 Lista de Rivais e Curiosidades</a></li>
                     <li><a onclick="lerArtigo('eastereggs')">🩸 Easter Eggs e Modos Secretos</a></li>
@@ -325,41 +362,118 @@
 
     <!-- Rodapé -->
     <footer>
-        <p>&copy; 2026 Yandere Chronicle. Conteúdo de fãs .Bianca Ribeiro - 1B .Yandere Simulator pertence ao seu desenvolvedor original.</p>
+        <p>&copy; 2026 Yandere Chronicle. Conteúdo de fãs sem fins comerciais. Yandere Simulator pertence ao seu desenvolvedor original.</p>
     </footer>
 
     <!-- Script para gerenciar a navegação dos links -->
     <script>
         const artigos = {
+            ryoba: {
+                titulo: "Modo 1989: O Legado Sombrio de Ryoba Aishi",
+                data: "30 de Julho, 2026",
+                texto: `
+                    <p>O <strong>Modo 1980s</strong> nos coloca no papel de <strong>Ryoba Aishi</strong>, a mãe da protagonista Ayano. Diferente da história atual, Ryoba viveu sua juventude em uma versão retro da Academia Akademi, lidando com rivais da época e enfrentando um sistema judiciário que quase a desmascarou.</p>
+                    
+                    <h3>📌 Principais Diferenças do Modo 1989</h3>
+                    <ul>
+                        <li><strong>Tecnologia Retrô:</strong> Sem smartphones! Em vez do Info-chan, Ryoba usa cabines telefônicas e jornais para obter informações.</li>
+                        <li><strong>As 10 Rivais Clássicas:</strong> Uma campanha completa jogável do início ao fim com rivais como Kaguya Wakaizumi e Chigusa Busujima.</li>
+                        <li><strong>Clima dos Anos 80:</strong> Filtros de estética VHS, trilha sonora synthwave e uniformes clássicos da época.</li>
+                    </ul>
+
+                    <h3>⚖️ O Julgamento Final</h3>
+                    <p>Ao contrário de Ayano, o destino de Ryoba culmina em um <strong>julgamento em tribunal</strong>. O jornalista investigativo tenta provar sua culpa perante o júri. Para obter o final bom, Ryoba precisa:</p>
+                    <ul>
+                        <li>Manter uma reputação impecável na escola.</li>
+                        <li>Não deixar nenhuma evidência física ou impressões digitais.</li>
+                        <li>Eliminar a última rival (Sumire Saitozaki) de maneira totalmente furtiva.</li>
+                    </ul>
+                `
+            },
             progresso: {
                 titulo: "Progresso da Rival Principal: O que esperar das próximas builds",
                 data: "29 de Julho, 2026",
-                texto: "O desenvolvimento de Yandere Simulator tem avançado através de marcos importantes na implementação das rivais. YandereDev tem focado na otimização de código, melhorias de desempenho na Academia Akademi e na correção de bugs reportados pela comunidade. A mecânica de eliminação furtiva recebeu ajustes finos para garantir que os estudantes reajam de forma mais realista à presença de sangue, armas expostas ou comportamentos suspeitos de Ayano."
+                texto: `
+                    <p>O desenvolvimento do modo história principal continua a todo vapor. As mecânicas de inteligência artificial dos alunos e sistemas de segurança foram aprimorados significativamente.</p>
+                    
+                    <h3>📌 Destaques das Atualizações Recentes</h3>
+                    <ul>
+                        <li><strong>IA dos Alunos:</strong> Reações mais dinâmicas a sangue, armas expostas e barulhos suspeitos.</li>
+                        <li><strong>Otimização de Código:</strong> Redução nas quedas de quadros (FPS) em áreas populosas da escola.</li>
+                        <li><strong>Novos Comportamentos de Clube:</strong> Membros do clube de artes e artes marciais agora patrulham áreas específicas.</li>
+                    </ul>
+                `
             },
             guia: {
                 titulo: "Guia Definitivo: Como eliminar rivais sem levantar suspeitas",
                 data: "15 de Julho, 2026",
-                texto: "Para eliminar uma rival sem deixar rastros no Yandere Simulator, a furtividade é essencial. 1) Certifique-se de usar luvas para não deixar impressões digitais na arma do crime. 2) Limpe poças de sangue com um esfregão e descarte os uniformes sujos no incinerador. 3) Se optar por métodos pacíficos, faça amizade com os pretendentes das rivais ou use estratégias de humilhação pública para diminuir a reputação delas na escola."
+                texto: `
+                    <p>Manter as mãos limpas — ou pelo menos parecer inocente — é a chave para sobreviver a cada semana sem levar um <em>Game Over</em> da Polícia ou do Senpai.</p>
+                    
+                    <h3>📌 Passo a Passo para uma Eliminação Perfeita</h3>
+                    <ul>
+                        <li><strong>1. Furtividade e Luvas:</strong> Sempre use luvas de borracha ao manusear armas para não registrar impressões digitais.</li>
+                        <li><strong>2. Limpeza de Evidências:</strong> Descarte uniformes sujos de sangue no incinerador do clube de jardinagem e limpe o chão com esfregão e alvejante.</li>
+                        <li><strong>3. Métodos Pacíficos:</strong> Se preferir não derramar sangue, use o sistema de <strong>Cupido (Matchmaking)</strong> para juntar a rival com outro estudante ou estrague a reputação dela até que desista de frequentar a escola.</li>
+                    </ul>
+                `
             },
             segredos: {
                 titulo: "Segredos e Mistérios da Academia Akademi",
                 data: "Arquivo do Blog",
-                texto: "A Academia Akademi esconde diversos segredos sombrios em seus corredores e porões. Desde fitas cassetes antigas espalhadas pelos andares que contam o passado da escola e da mãe de Ayano, até salas misteriosas trancadas que guardam experimentos e referências a outras lendas urbanas japonesas."
+                texto: `
+                    <p>A Academia Akademi oculta segredos que vão muito além dos dramas escolares adolescentes.</p>
+                    
+                    <h3>📌 Mistérios Escondidos</h3>
+                    <ul>
+                        <li><strong>Fitas Cassete do Jornalista:</strong> Gravações espalhadas pela escola revelam a investigação dos crimes de 1989 cometidos por Ryoba Aishi.</li>
+                        <li><strong>O Porão dos Aishi:</strong> O local onde a família guarda seus segredos mais sombrios e prende suas vítimas.</li>
+                        <li><strong>Phantom Girl:</strong> O fantasma que assombra o banheiro feminino do terceiro andar, vítima do passado da escola.</li>
+                    </ul>
+                `
             },
             rivais: {
                 titulo: "Lista de Rivais e Curiosidades",
                 data: "Arquivo do Blog",
-                texto: "O jogo planeja trazer um total de 10 rivais principais, cada uma com sua própria personalidade, rotina diária e ponto fraco. A primeira rival, Osana Najimi, é a amiga de infância tsundere de Senpai. Cada semana traz um desafio único com mecânicas totalmente inéditas para impedir que a rival se declare para o Senpai."
+                texto: `
+                    <p>Cada rival do jogo possui uma personalidade única, uma rotina própria e um nível de dificuldade progressivo.</p>
+                    
+                    <h3>📌 Visão Geral das Rivais</h3>
+                    <ul>
+                        <li><strong>Osana Najimi (Semana 1):</strong> A amiga de infância Tsundere. Protegida constantemente por Raibaru.</li>
+                        <li><strong>Amai Odayaka (Semana 2):</strong> A meiga presidente do clube de culinária.</li>
+                        <li><strong>Kizana Sunobu (Semana 3):</strong> A arrogante presidente do clube de drama.</li>
+                        <li><strong>Megami Saikou (Semana 10):</strong> A presidente do conselho estudantil e a rival mais perigosa de todas.</li>
+                    </ul>
+                `
             },
             eastereggs: {
                 titulo: "Easter Eggs e Modos Secretos",
                 data: "Arquivo do Blog",
-                texto: "Yandere Simulator é famoso por seus inúmeros Easter Eggs hilários ou bizarros que podem ser ativados através de comandos de teclas especiais ou easter egg menu. Entre os mais famosos estão o Modo Cheats (que transforma o jogo em algo cômico), referências a animes populares e transformações mágicas inspiradas em garotas mágicas."
+                texto: `
+                    <p>O jogo é repleto de modos alternativos ativáveis no menu de extras ou via comandos de teclado.</p>
+                    
+                    <h3>📌 Modos Populares</h3>
+                    <ul>
+                        <li><strong>Bad Romance / Stand Mode:</strong> Habilidades especiais inspiradas em animes de ação.</li>
+                        <li><strong>Falcon Mode:</strong> Permite golpear alunos com superforça.</li>
+                        <li><strong>Magical Girl Mode:</strong> Transforma Ayano em uma garota mágica com ataques de luz.</li>
+                    </ul>
+                `
             },
             requisitos: {
                 titulo: "Requisitos de Sistema e Otimização",
                 data: "Arquivo do Blog",
-                texto: "Por ser um jogo em desenvolvimento contínuo construído na engine Unity com uma enorme quantidade de NPCs com rotinas complexas, o Yandere Simulator exige uma placa de vídeo dedicada e um bom processador. Ajustar a distância de renderização e a qualidade dos gráficos no menu de opções do jogo ajuda consideravelmente a manter uma taxa de quadros estável."
+                texto: `
+                    <p>Para garantir que o jogo rode com uma boa taxa de quadros, confira as recomendações de configuração:</p>
+                    
+                    <h3>📌 Dicas de Configuração</h3>
+                    <ul>
+                        <li><strong>Sombras e Oclusão:</strong> Desative a oclusão de ambiente para um ganho imediato de até 15 FPS.</li>
+                        <li><strong>Distância de Renderização:</strong> Reduza a visão para 50m no menu de opções.</li>
+                        <li><strong>Placa de Vídeo:</strong> Recomendado GPU dedicada com pelo menos 2GB de VRAM.</li>
+                    </ul>
+                `
             }
         };
 
@@ -373,7 +487,7 @@
                 contentBox.innerHTML = `
                     <div style="font-size: 0.85rem; color: var(--primary-color); font-weight: bold; margin-bottom: 0.5rem;">${art.data}</div>
                     <h2>${art.titulo}</h2>
-                    <p>${art.texto}</p>
+                    ${art.texto}
                 `;
                 feed.style.display = 'none';
                 view.style.display = 'block';
